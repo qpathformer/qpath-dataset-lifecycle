@@ -1,0 +1,77 @@
+Q-Pathformer Dataset Lifecycle — Example Execution Trace
+Environment: Windows PowerShell 7.5.4
+Repository: v1.0-qpath-dataset-lifecycle
+
+This file records a successful execution of the governed dataset lifecycle
+pipeline included in this repository. It demonstrates the reference workflow
+from ID_3 freeze artifacts through passport generation, lifecycle routing,
+authorization filtering, STATE_3 dataset formation, reference promotion to a
+STATE_1 candidate, and lineage schema validation.
+
+PS C:\Users\ALNOTREA> cd "c:\v1.0-qpath-dataset-lifecycle"
+
+PS C:\v1.0-qpath-dataset-lifecycle> py tools/converters/id3_freeze_to_passport.py `
+  --module-baseline examples/id3_freeze_example/module_03_baseline.canonical.json `
+  --module-variant examples/id3_freeze_example/module_03_variant.canonical.json `
+  --session-baseline examples/id3_freeze_example/session_baseline.canonical.json `
+  --session-variant examples/id3_freeze_example/session_variant.canonical.json `
+  --hashes examples/id3_freeze_example/hashes.txt `
+  --freeze-note examples/id3_freeze_example/ID3_FREEZE_NOTE.md `
+  --passport-id QPDS-EXAMPLE-001 `
+  --out examples/dataset_passport.generated.json
+
+Wrote dataset passport: examples\dataset_passport.generated.json
+
+
+PS C:\v1.0-qpath-dataset-lifecycle> py tools/validators/passport_validator.py `
+  --schema schemas/dataset_passport.schema.json `
+  --input examples/dataset_passport.generated.json
+
+VALID: examples\dataset_passport.generated.json
+
+
+PS C:\v1.0-qpath-dataset-lifecycle> py tools/routing/dataset_lifecycle_router.py `
+  --passport examples/dataset_passport.generated.json `
+  --routing-id QPDS-ROUTE-001 `
+  --out examples/dataset_routing.generated.json
+
+Wrote routing record: examples\dataset_routing.generated.json
+
+
+PS C:\v1.0-qpath-dataset-lifecycle> py tools/authorization/authorization_control.py `
+  --passport examples/dataset_passport.generated.json `
+  --report-out examples/authorization_report.generated.json `
+  --filtered-dataset-out examples/state_candidate.generated.json
+
+Wrote authorization report: examples\authorization_report.generated.json
+Wrote filtered dataset stub: examples\state_candidate.generated.json
+
+
+PS C:\v1.0-qpath-dataset-lifecycle> py tools/converters/id3_freeze_to_state3_dataset.py `
+  --module examples/id3_freeze_example/module_03_baseline.canonical.json `
+  --session examples/id3_freeze_example/session_baseline.canonical.json `
+  --output examples/state3_dataset.generated.json
+
+Wrote STATE_3 dataset: examples/state3_dataset.generated.json
+
+
+PS C:\v1.0-qpath-dataset-lifecycle> py tools/authorization/authorized_dataset_filter.py `
+  --input examples/state3_dataset.generated.json `
+  --output examples/state3_dataset_authorized.json `
+  --scope runtime_reasoning `
+  --scope synthetic_generation
+
+Wrote authorized dataset: examples\state3_dataset_authorized.json
+
+
+PS C:\v1.0-qpath-dataset-lifecycle> py tools/promotion/state3_to_state1_promoter.py `
+  --input examples/state3_dataset_authorized.json `
+  --output examples/state1_dataset.generated.json
+
+Wrote promoted dataset: examples/state1_dataset.generated.json
+
+
+PS C:\v1.0-qpath-dataset-lifecycle> py tools/validators/lineage_validator.py `
+  --input examples/dataset_lineage.example.json
+
+VALID: examples\dataset_lineage.example.json

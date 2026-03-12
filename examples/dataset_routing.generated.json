@@ -1,0 +1,55 @@
+{
+  "routing_version": "qpds_routing_v1.0",
+  "routing_id": "QPDS-ROUTE-001",
+  "dataset_passport_id": "QPDS-EXAMPLE-001",
+  "current_state": "STATE_3",
+  "default_target_state": "STATE_3",
+  "routing_decision": {
+    "decision": "route_to_state3",
+    "reason_code": "provisional_runtime_only",
+    "reason_text": "Default containment route for provisional governed dataset."
+  },
+  "authorization_checks": {
+    "runtime_reasoning_allowed": true,
+    "synthetic_generation_allowed": true,
+    "fine_tuning_allowed": false,
+    "external_training_allowed": false,
+    "human_review_required": true,
+    "authorization_basis": "internal_governance_review"
+  },
+  "containment_checks": {
+    "dataset_containment_principle_applies": true,
+    "signals_not_decisions": true,
+    "sensitive_content_present": false,
+    "authorization_filter_required": true
+  },
+  "teacher_student_convergence": {
+    "evaluated": true,
+    "state2_convergence_result": "pending",
+    "convergence_note": "Teacher-student convergence review required before durable training promotion."
+  },
+  "authorization_filtering": {
+    "filter_applied": false,
+    "elements_removed_count": 0,
+    "filter_reason_summary": [
+      "Fine-tuning not authorized at current state"
+    ]
+  },
+  "promotion_controls": {
+    "promotion_to_state1_allowed": true,
+    "new_version_required": true,
+    "promotion_event_required": true,
+    "promotion_blockers": [
+      "Fine-tuning not yet authorized",
+      "Authorization filtering required before durable training use",
+      "Human review required before promotion"
+    ]
+  },
+  "manual_review": {
+    "review_status": "pending",
+    "reviewed_by": "",
+    "review_note": "Awaiting governance review."
+  },
+  "recorded_at_utc": "2026-03-12T07:13:28Z",
+  "updated_at_utc": "2026-03-12T07:13:28Z"
+}

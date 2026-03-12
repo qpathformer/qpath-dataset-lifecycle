@@ -1,0 +1,303 @@
+{
+  "schema": "qpf.seal.manifest.internal.v1",
+  "authority": "Anthony Siljeg — Platform Steward",
+  "root_dir": "C:\\v1.0-qpath-dataset-lifecycle",
+  "file_count": 59,
+  "files": [
+    {
+      "path_rel": "CHANGELOG.md",
+      "size_bytes": 783,
+      "sha256": "AB63ADBB8D7BB33A2AFCF9B15D3128AA043C7A7624F880898EB8FDF567E94184"
+    },
+    {
+      "path_rel": "compliance/BOUNDARY.md",
+      "size_bytes": 549,
+      "sha256": "0A162482F57548D76F5E4871BCC401718C326195C76A439DDD53BED2A18552A5"
+    },
+    {
+      "path_rel": "compliance/RELEASE_STATUS.md",
+      "size_bytes": 637,
+      "sha256": "6295FC0E172B18288F601B48317F4C9067BAD2C09F1756649EEB73FD2794BD35"
+    },
+    {
+      "path_rel": "CONTRIBUTORS.md",
+      "size_bytes": 484,
+      "sha256": "0BB9F3A752DB885996211E456A15ECF75DE8C4C61DF9DD39485327BA72FE6108"
+    },
+    {
+      "path_rel": "docs/execution_toolkit/Implementation Guidance.docx",
+      "size_bytes": 26867,
+      "sha256": "9C6A7BB7C954C8E3E003CBAF389FF90B2317CFE98D7777C6280402A918A9EEFC"
+    },
+    {
+      "path_rel": "docs/execution_toolkit/implementation_guidance.md",
+      "size_bytes": 7247,
+      "sha256": "F8266BFB9C5B9E7EA3CACD2DB0407FDB08324B5CC368903EFC4B4F68DA24D4DF"
+    },
+    {
+      "path_rel": "docs/execution_toolkit/README.md",
+      "size_bytes": 615,
+      "sha256": "E1D5F69F6E904E1200E95704EE8C5033CA3432128902180EBA2CCD4999753E4A"
+    },
+    {
+      "path_rel": "docs/execution_toolkit/running_the_tools.md",
+      "size_bytes": 9324,
+      "sha256": "4CE8FDC5F829797078118E035CFFF3743A08BEA266FBBA7250F3CFEC79740E81"
+    },
+    {
+      "path_rel": "docs/LICENSE_NOTICE.md",
+      "size_bytes": 242,
+      "sha256": "8278006BF56AE4E9E085AD3B7A96C4F6773D4E96FA1D982F21A06B14320A9C1A"
+    },
+    {
+      "path_rel": "docs/QPATHFORMER-PLATFORM-1.0 LICENSE.pdf",
+      "size_bytes": 134610,
+      "sha256": "DAFBBD6AC3AE7CA9BF0CD94E23DC4F22294F01879D296EC3FBCD662AA1D1CF45"
+    },
+    {
+      "path_rel": "docs/relationship_to_apod_dataset_lifecycle_release/APOD-TR-007 - Governed Dataset Onboarding and Lifecycle Routing.pdf",
+      "size_bytes": 636940,
+      "sha256": "522E5BD264AE052234CB1941533F6B7962EEE2B4B6A98C10F142F38B868B59FC"
+    },
+    {
+      "path_rel": "docs/relationship_to_apod_dataset_lifecycle_release/QPATH-ARCH-001 - Q-Pathformer - Multi-state Machine Learning & LLM Training.pdf",
+      "size_bytes": 1747813,
+      "sha256": "A0404ADEAB6C1FD647B6F2B46020D200A6D86E5867E62EA226F1618E12B524D8"
+    },
+    {
+      "path_rel": "docs/relationship_to_apod_dataset_lifecycle_release/README.md",
+      "size_bytes": 1294,
+      "sha256": "72C580D58F030F7D5540F948026F127299D10A6E2400B4A8A00504DAFD7E82AA"
+    },
+    {
+      "path_rel": "docs/repository_overview.md",
+      "size_bytes": 3235,
+      "sha256": "755C7616B3A9D27946638027F283819E5E7ADDE108DF380EE2A568248C8DD3F1"
+    },
+    {
+      "path_rel": "docs/SPDX_LICENSE.md",
+      "size_bytes": 800,
+      "sha256": "E5F0353A12581AC83BD1900DFC12891188EE1622631AB17A88D2749FBA836110"
+    },
+    {
+      "path_rel": "examples/authorization_report.generated.json",
+      "size_bytes": 833,
+      "sha256": "FB4297A92950B2B8CFC07C97383218E9F47C4E400462E5B0909CC62C7B853A4C"
+    },
+    {
+      "path_rel": "examples/dataset_lineage.example.json",
+      "size_bytes": 4702,
+      "sha256": "994218FDDB2C2B6FDA058FC55123392023EBA6B630FDDB563A719AEA9BDC7BF0"
+    },
+    {
+      "path_rel": "examples/dataset_passport.example.json",
+      "size_bytes": 6448,
+      "sha256": "BF6AB0C2AC7546CE1DDB50E738CC35541A8273C67996A9E3A81A3F358E8EC4EB"
+    },
+    {
+      "path_rel": "examples/dataset_passport.generated.json",
+      "size_bytes": 6404,
+      "sha256": "963D9394DD9DD3BE787349FF5C5E61A8ECC01601707AC15EB743EB3DE04EA734"
+    },
+    {
+      "path_rel": "examples/dataset_routing.example.json",
+      "size_bytes": 2242,
+      "sha256": "89068AB554126BD20F6EC185A832B784FFE36B33A665A02B9F9558E17A0E67AA"
+    },
+    {
+      "path_rel": "examples/dataset_routing.generated.json",
+      "size_bytes": 1869,
+      "sha256": "92330F640C5DD2D2664F144BC884DE0D1F69A1BFDB2829893FF69D2484831FFD"
+    },
+    {
+      "path_rel": "examples/execution_profile.example.json",
+      "size_bytes": 2076,
+      "sha256": "3FF1B7D87F4DBAF0735ADB24A50F32CF9F72F7806BEFF2267992A27525A757F1"
+    },
+    {
+      "path_rel": "examples/id3_freeze_example/hashes.txt",
+      "size_bytes": 398,
+      "sha256": "E2765B0242DCE4E4AE91EED75B2AF66C44A8712890066467BC33D37BFCB0894C"
+    },
+    {
+      "path_rel": "examples/id3_freeze_example/ID3_FREEZE_NOTE.md",
+      "size_bytes": 1555,
+      "sha256": "519E373402D78C4240F6EF97EED7367157DFBD571628C8AE51E7BB22DA2E285B"
+    },
+    {
+      "path_rel": "examples/id3_freeze_example/module_03_baseline.canonical.json",
+      "size_bytes": 9212,
+      "sha256": "BD543483467BA8091F05B91FFAFB96CC72C5A69C26995C211EDCDB6CF3E1637C"
+    },
+    {
+      "path_rel": "examples/id3_freeze_example/module_03_variant.canonical.json",
+      "size_bytes": 10710,
+      "sha256": "7000B9888893866AD781751346293CDF977ED9BAB23E46EE6FE8AFD958820D41"
+    },
+    {
+      "path_rel": "examples/id3_freeze_example/session_baseline.canonical.json",
+      "size_bytes": 2864,
+      "sha256": "4089536A4C2BD91F822A88D6A9561322DB00F333834257919B30FA7EA1036698"
+    },
+    {
+      "path_rel": "examples/id3_freeze_example/session_variant.canonical.json",
+      "size_bytes": 3570,
+      "sha256": "7BF3826E371C91DC0249E6D099A6771033DDC2BD65A09791FC36584C987F9C29"
+    },
+    {
+      "path_rel": "examples/lifecycle_execution_trace.txt",
+      "size_bytes": 3347,
+      "sha256": "DFFB6059391EED98148D077281137110F87148BE2B7029BAAD6B2F7753711607"
+    },
+    {
+      "path_rel": "examples/policy_lineage.example.json",
+      "size_bytes": 3311,
+      "sha256": "71C82D0C7E7E04A41287179C7EA60A7881EA1CB452937A96E04B7E825E1E786C"
+    },
+    {
+      "path_rel": "examples/README.md",
+      "size_bytes": 366,
+      "sha256": "EF7BB9F5A7A3BB4C6445DFC3D588EBE98E3986593CB274B15191422D42D6AF8F"
+    },
+    {
+      "path_rel": "examples/state_candidate.generated.json",
+      "size_bytes": 480,
+      "sha256": "69E102F4AF874CF7FD8BB5053F674C51A71F017CE8BA4BFFCCA9B455D08F5407"
+    },
+    {
+      "path_rel": "examples/state1_dataset.generated.json",
+      "size_bytes": 516,
+      "sha256": "DB2D1867588AC62FA049BE9EB5FC20A83ED43D44F644780BE5F92E0914AE1C6A"
+    },
+    {
+      "path_rel": "examples/state3_dataset_authorized.json",
+      "size_bytes": 391,
+      "sha256": "46B07A38C9B5642F204A44F6B8563ED3DAAD81246F2313460C1682EF47AF71D6"
+    },
+    {
+      "path_rel": "examples/state3_dataset.generated.json",
+      "size_bytes": 259,
+      "sha256": "DC8540EF00F82089982FBD01B44B47B22019A6FD60A9AF0415CC84E9BE2CFE7F"
+    },
+    {
+      "path_rel": "extensions/capsule_profile.schema.json",
+      "size_bytes": 781,
+      "sha256": "AA7BA279612B2673342F3AF95D6A95373E1C032122EFA88B0F6DFF6BB7B5A434"
+    },
+    {
+      "path_rel": "extensions/qpath_execution_profile.schema.json",
+      "size_bytes": 956,
+      "sha256": "8450C461360BB04156AC3DDAE752EC3C1312DB9C2F27C55967980F8A2898FAD9"
+    },
+    {
+      "path_rel": "extensions/ugccmt_extension.schema.json",
+      "size_bytes": 685,
+      "sha256": "BBDD48BA18EADF4D8C71FC11A682BB6EA8DD37FA74DBC13ED1E881DF259F1DAB"
+    },
+    {
+      "path_rel": "LICENSE",
+      "size_bytes": 142,
+      "sha256": "2C920BA216A51E09D9F0A2BFA7A79EE0B98B9637E3FE8D523766A0C271C2F966"
+    },
+    {
+      "path_rel": "mappings/id3_to_passport_field_mapping.md",
+      "size_bytes": 7242,
+      "sha256": "6EBB5C0D45CB379972B5B47CB747C2B030BD0C21A74385E3AD99A3E1BF482AAF"
+    },
+    {
+      "path_rel": "mappings/state1_state2_state3_matrix.md",
+      "size_bytes": 4138,
+      "sha256": "9DEAA623ACEA202BC341F407D46C7175C1438125FE2CF8712044416A45C5EEA4"
+    },
+    {
+      "path_rel": "QPATHFORMER-PLATFORM-1.0.txt",
+      "size_bytes": 1494,
+      "sha256": "8C2C5E9D5FEEE4DADD1F276107B9C4E44738E67F4E0FB09C505BFE1869FC9FF8"
+    },
+    {
+      "path_rel": "README.md",
+      "size_bytes": 14934,
+      "sha256": "130C210FBF643BD4D2B8C3B810A844F67B2FCD538A03CA704508D4B5A16784CB"
+    },
+    {
+      "path_rel": "release_notes.md",
+      "size_bytes": 5673,
+      "sha256": "9840297D961744EC67AF6B2BCEF8CA7395C57151D381220E049CCDA0DA66D37D"
+    },
+    {
+      "path_rel": "schemas/dataset_lineage.schema.json",
+      "size_bytes": 7929,
+      "sha256": "433C35AC72CAE91E44A0CF6F04E96F480B5653B875D4CC643DB6DDBF774525AC"
+    },
+    {
+      "path_rel": "schemas/dataset_passport.schema.json",
+      "size_bytes": 14669,
+      "sha256": "CB568BB618E46E714011B6424FCC67C0BC67ADC9888032DD369EFA254A85BCAA"
+    },
+    {
+      "path_rel": "schemas/dataset_routing.schema.json",
+      "size_bytes": 7768,
+      "sha256": "399528997069EBCDD037C3AE1B052C6F800CBB9CB4849BF36EC1911169223347"
+    },
+    {
+      "path_rel": "schemas/execution_profile.schema.json",
+      "size_bytes": 6267,
+      "sha256": "B6A9EB4D1AA0BBBC4065E61A16BC0FD6377749B6B83082C3715B20AE5B3BF47B"
+    },
+    {
+      "path_rel": "schemas/policy_lineage.schema.json",
+      "size_bytes": 5993,
+      "sha256": "44100EECC38D7AEB9EE888DC28514FBA6451B95ACE159955A649A52987259469"
+    },
+    {
+      "path_rel": "tools/authorization/authorization_control.py",
+      "size_bytes": 4764,
+      "sha256": "689D3D09C56F3461030184614C0CFD67CDA96A00061974DFBE7B6DBC3FEB16C9"
+    },
+    {
+      "path_rel": "tools/authorization/authorized_dataset_filter.py",
+      "size_bytes": 1946,
+      "sha256": "EBDFFBB198A82E4ECB8658C12C77860911CBC67387901DF461563F03B5CB5C4B"
+    },
+    {
+      "path_rel": "tools/converters/id3_freeze_to_passport.py",
+      "size_bytes": 12472,
+      "sha256": "3F29FDC2A6AB0C2448489DC427FA4210A4C65ABEF4EC069656B8FEF489FE7244"
+    },
+    {
+      "path_rel": "tools/converters/id3_freeze_to_state3_dataset.py",
+      "size_bytes": 2120,
+      "sha256": "357B4DD4D24077326623AB391BD716F6570D364E85F355F91392A925ED085968"
+    },
+    {
+      "path_rel": "tools/promotion/state3_to_state1_promoter.py",
+      "size_bytes": 1737,
+      "sha256": "A09446226860BC2210CB99765F4AF1658F1E52B035D767A2C2F24C6449ED6840"
+    },
+    {
+      "path_rel": "tools/README.md",
+      "size_bytes": 1891,
+      "sha256": "A6A26A9040B8296BD6CA8DEFAED6B0B8F6EFBEB6CA929C740A5F7CB7A0EE9DC1"
+    },
+    {
+      "path_rel": "tools/routing/dataset_lifecycle_router.py",
+      "size_bytes": 5718,
+      "sha256": "77DAEAE5E87D6773244B1AD55423282F63228EE97EAF08C322E72B76A0AF3541"
+    },
+    {
+      "path_rel": "tools/setup_examples.ps1",
+      "size_bytes": 1615,
+      "sha256": "3E71BE035719B08875308945872685CA86819BE01DF1572987E68486A4014964"
+    },
+    {
+      "path_rel": "tools/validators/lineage_validator.py",
+      "size_bytes": 1229,
+      "sha256": "203EBCB28239ECD6E2C17B71F909BCC4F09860DA0F1D700D35767B54DA979484"
+    },
+    {
+      "path_rel": "tools/validators/passport_validator.py",
+      "size_bytes": 1669,
+      "sha256": "DBC3BD74DCCD5C8FFC18446891614B1ED550C5CEA49BEAC357EF34AFB98B3480"
+    }
+  ]
+}

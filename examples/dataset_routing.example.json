@@ -1,0 +1,57 @@
+{
+  "routing_version": "qpds_routing_v1.0",
+  "routing_id": "QPDS-ROUTE-2026-02-10-M03-001",
+  "dataset_passport_id": "QPDS-2026-02-10-M03-TIMEPRESSURE-001",
+  "current_state": "STATE_3",
+  "default_target_state": "STATE_3",
+  "routing_decision": {
+    "decision": "route_to_state3",
+    "reason_code": "provisional_runtime_only",
+    "reason_text": "Dataset is derived from ID_3 frozen operational reasoning capture. Intended use remains signals not decisions, non-inspection, and human decision required."
+  },
+  "authorization_checks": {
+    "runtime_reasoning_allowed": true,
+    "synthetic_generation_allowed": true,
+    "fine_tuning_allowed": false,
+    "external_training_allowed": false,
+    "human_review_required": true,
+    "authorization_basis": "internal_governance_review"
+  },
+  "containment_checks": {
+    "dataset_containment_principle_applies": true,
+    "signals_not_decisions": true,
+    "sensitive_content_present": false,
+    "authorization_filter_required": true
+  },
+  "teacher_student_convergence": {
+    "evaluated": true,
+    "state2_convergence_result": "pending",
+    "convergence_note": "Teacher signals from baseline and time-pressure variant are structurally aligned but require State 2 review before any durable training promotion."
+  },
+  "authorization_filtering": {
+    "filter_applied": false,
+    "elements_removed_count": 0,
+    "filter_reason_summary": [
+      "Fine-tuning not authorized at current state",
+      "No external training authorization",
+      "Promotion requires human review and new dataset version"
+    ]
+  },
+  "promotion_controls": {
+    "promotion_to_state1_allowed": true,
+    "new_version_required": true,
+    "promotion_event_required": true,
+    "promotion_blockers": [
+      "Fine-tuning authorization missing",
+      "Authorization filtering not yet applied",
+      "Manual review pending"
+    ]
+  },
+  "manual_review": {
+    "review_status": "pending",
+    "reviewed_by": "Governance reviewer",
+    "review_note": "Dataset may proceed to State 2 validation for convergence and filtering. State 1 promotion not yet approved."
+  },
+  "recorded_at_utc": "2026-03-08T00:00:00Z",
+  "updated_at_utc": "2026-03-08T00:00:00Z"
+}

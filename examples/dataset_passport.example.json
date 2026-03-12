@@ -1,0 +1,155 @@
+{
+  "passport_version": "qpds_passport_v1.0",
+  "dataset_passport_id": "QPDS-2026-02-10-M03-TIMEPRESSURE-001",
+  "dataset_title": "AI Usage Percentage Stress Scenario Signals",
+  "dataset_description": "Dataset passport derived from Access-PoD ID_3 frozen baseline and variant session/module artifacts for Module 03 SAPP stress testing. Contains governance reasoning signals, not decisions.",
+  "dataset_kind": "governed_training_input",
+  "dataset_origin": "access_pod_id3_freeze",
+  "dataset_owner": {
+    "owner_type": "project",
+    "owner_name": "Access-PoD / Governed Dataset Lifecycle Framework",
+    "jurisdiction": "Australia"
+  },
+  "provenance": {
+    "source_system": "Access-PoD",
+    "source_access_mode": "ID_3",
+    "source_record_class": "mixed_record",
+    "source_session_id": "ID2-20260210-1835-session",
+    "source_module_id": "03",
+    "source_freeze_id": "2026-02-10--FREEZE-20260228-215707Z",
+    "inspection_status": "frozen_under_ID_3",
+    "frozen_at_utc": "2026-02-28T21:57:07Z",
+    "hash_manifest_algorithm": "SHA-256",
+    "freeze_hash_verified": true,
+    "canonical_artifacts": [
+      {
+        "artifact_name": "module_03_baseline.canonical.json",
+        "artifact_role": "primary_module_record",
+        "sha256": "bd543483467ba8091f05b91ffafb96cc72c5a69c26995c211edcdb6cf3e1637c",
+        "path_hint": "examples/id3_freeze_example/module_03_baseline.canonical.json"
+      },
+      {
+        "artifact_name": "module_03_variant.canonical.json",
+        "artifact_role": "variant_module_record",
+        "sha256": "7000b9888893866ad781751346293cdf977ed9bab23e46ee6fe8afd958820d41",
+        "path_hint": "examples/id3_freeze_example/module_03_variant.canonical.json"
+      },
+      {
+        "artifact_name": "session_baseline.canonical.json",
+        "artifact_role": "parent_session_record",
+        "sha256": "4089536a4c2bd91f822a88d6a9561322db00f333834257919b30fa7ea1036698",
+        "path_hint": "examples/id3_freeze_example/session_baseline.canonical.json"
+      },
+      {
+        "artifact_name": "session_variant.canonical.json",
+        "artifact_role": "variant_session_record",
+        "sha256": "7bf3826e371c91dc0249e6d099a6771033ddc2bd65a09791fc36584c987f9c29",
+        "path_hint": "examples/id3_freeze_example/session_variant.canonical.json"
+      },
+      {
+        "artifact_name": "ID3_FREEZE_NOTE.md",
+        "artifact_role": "freeze_note",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "path_hint": "examples/id3_freeze_example/ID3_FREEZE_NOTE.md"
+      },
+      {
+        "artifact_name": "hashes.txt",
+        "artifact_role": "hash_manifest",
+        "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "path_hint": "examples/id3_freeze_example/hashes.txt"
+      }
+    ],
+    "evidence_note": "Canonical artifacts stamped prior to hashing; final under ID_3 means final packaging and deterministic archive verification, not compliance or approval."
+  },
+  "lifecycle": {
+    "state": "STATE_3",
+    "state_reason": "ID_3 frozen operational reasoning signals suitable for runtime reasoning and synthetic preparation, but not yet authorized for durable fine-tuning.",
+    "state2_review_required": true,
+    "promotion_to_state1_allowed": true,
+    "promotion_blockers": [
+      "Fine-tuning not yet authorized",
+      "Authorization filtering required before durable training use",
+      "Human review required before promotion"
+    ]
+  },
+  "authorization_scope": {
+    "runtime_reasoning": true,
+    "synthetic_generation": true,
+    "fine_tuning": false,
+    "external_training": false,
+    "research_experimentation": true,
+    "third_party_model_use": false,
+    "human_review_required": true,
+    "authorization_basis": "internal_governance_review",
+    "authorization_note": "Use limited to contained runtime reasoning, synthetic preparation, and research experimentation. Signals are not decisions and do not imply adequacy, compliance, or approval.",
+    "effective_from_utc": "2026-02-28T21:57:07Z"
+  },
+  "governance_flags": {
+    "human_decision_required": true,
+    "signals_not_decisions": true,
+    "non_certifying": true,
+    "non_compliance_claim": true,
+    "non_trust_claim": true,
+    "contains_sensitive_data": false,
+    "contains_synthetic_content": false,
+    "dataset_containment_principle_applies": true
+  },
+  "lineage": {
+    "lineage_record_type": "mixed_lineage",
+    "parent_refs": [
+      {
+        "ref_type": "session",
+        "ref_id": "ID2-20260210-1835-session",
+        "note": "Baseline session"
+      },
+      {
+        "ref_type": "session",
+        "ref_id": "ID2-20260210-1907-session-timepressure",
+        "note": "Variant time-pressure session"
+      },
+      {
+        "ref_type": "module",
+        "ref_id": "03",
+        "note": "SAPP Simulation & Stress Testing"
+      },
+      {
+        "ref_type": "artifact",
+        "ref_id": "2026-02-10--FREEZE-20260228-215707Z",
+        "note": "ID_3 outbox freeze package"
+      }
+    ],
+    "policy_refs": [
+      {
+        "document_id": "APOD-TR-004",
+        "title": "A WEB of Sharing Trust–Responsibility Toward a Trustless Future Vol.2",
+        "edition": "Second Edition — Version C",
+        "section_ref": "Onboarding and containment posture"
+      },
+      {
+        "document_id": "APOD-TR-007",
+        "title": "Governed Dataset Onboarding and Lifecycle Routing for AI Training Systems",
+        "edition": "First Edition — Draft A",
+        "section_ref": "Dataset Passport model"
+      }
+    ]
+  },
+  "signal_profile": {
+    "teacher_signals": [
+      "scenario_seeds",
+      "stressors",
+      "signals_observed",
+      "fragility_points",
+      "authority_drift_flags",
+      "uncertainty_notes",
+      "escalation_triggers"
+    ],
+    "student_interpretation_mode": "pattern extraction for governance reasoning signals under containment",
+    "signal_note": "Teacher signals derived from Module 03 baseline and variant simulation records. Student interpretation remains non-authoritative and subject to State 2 convergence review before any durable training use."
+  },
+  "execution_profile": {
+    "enabled": false,
+    "environment": "none"
+  },
+  "created_at_utc": "2026-03-08T00:00:00Z",
+  "updated_at_utc": "2026-03-08T00:00:00Z"
+}

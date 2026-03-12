@@ -1,0 +1,13 @@
+{
+  "dataset_version": "qpds_filtered_dataset_stub_v1.0",
+  "dataset_passport_id": "QPDS-EXAMPLE-001",
+  "lifecycle_state": "STATE_2",
+  "authorized_for_fine_tuning": false,
+  "notes": [
+    "Removed from STATE_1 candidate set: fine-tuning not authorized",
+    "External training use prohibited",
+    "Signals remain non-authoritative under containment",
+    "Manual review still required before durable promotion"
+  ],
+  "generated_at_utc": "2026-03-12T07:13:56Z"
+}

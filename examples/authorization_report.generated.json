@@ -1,0 +1,25 @@
+{
+  "authorization_control_version": "qpds_authorization_control_v1.0",
+  "dataset_passport_id": "QPDS-EXAMPLE-001",
+  "input_state": "STATE_3",
+  "authorization_status": {
+    "runtime_reasoning": true,
+    "synthetic_generation": true,
+    "fine_tuning": false,
+    "external_training": false,
+    "human_review_required": true
+  },
+  "filtering_outcome": {
+    "state1_eligible": false,
+    "filter_applied": true,
+    "elements_removed_count": 4,
+    "removal_reasons": [
+      "Removed from STATE_1 candidate set: fine-tuning not authorized",
+      "External training use prohibited",
+      "Signals remain non-authoritative under containment",
+      "Manual review still required before durable promotion"
+    ]
+  },
+  "next_recommended_state": "STATE_2",
+  "recorded_at_utc": "2026-03-12T07:13:56Z"
+}

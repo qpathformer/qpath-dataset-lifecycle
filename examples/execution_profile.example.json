@@ -1,0 +1,46 @@
+{
+  "execution_profile_version": "qpds_execution_profile_v1.0",
+  "enabled": true,
+  "environment": "q_pathformer",
+  "environment_version": "strategic-reference-profile",
+  "non_authoritative_execution_metadata": true,
+  "state_orchestration": {
+    "state1_role": "durable_fine_tuning",
+    "state2_role": "validation_convergence",
+    "state3_role": "runtime_memory_signals",
+    "orchestration_note": "State 3 used for enhanced memory and signal retention during runtime sessions. State 2 used for teacher-student convergence and validation. State 1 used only after controlled promotion into durable fine-tuning corpus."
+  },
+  "ugccmt": {
+    "enabled": true,
+    "unit_ref": "module03_governance_signals",
+    "group_id": "stress_governance",
+    "colour_code": "yellow",
+    "code_salt_profile": "id3_freeze_hash_anchored",
+    "measure_profile": "provisional_signals",
+    "train_profile": "state3_runtime_support",
+    "policy_anchor_ref": "APOD-TR-003"
+  },
+  "capsule_pipeline": {
+    "enabled": true,
+    "capsule_id": "CAP-M03-TIMEPRESSURE-001",
+    "capsule_stage": "runtime_support",
+    "capsule_version": "v1.0",
+    "capsule_note": "Capsule metadata remains optional and additive to governance passport."
+  },
+  "teacher_student_profile": {
+    "teacher_signal_mode": "structured_artifact_signals",
+    "student_signal_mode": "runtime_interpretation",
+    "state2_convergence_enabled": true
+  },
+  "context_window_profile": {
+    "per_state_window_strategy": "bounded_per_state",
+    "sector_context_aggregation": true,
+    "context_note": "Shorter context windows may be maintained within each lifecycle state while broader sector or industry context is aggregated at orchestration level."
+  },
+  "template_provenance": {
+    "source_template_family": "stress_testing_transition_templates",
+    "source_template_version": "2020",
+    "template_validation_status": "valid"
+  },
+  "execution_note": "Execution profile is optional. It does not alter lifecycle state, authorization scope, or governance authority."
+}

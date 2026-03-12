@@ -1,0 +1,84 @@
+{
+  "policy_lineage_version": "qpds_policy_lineage_v1.0",
+  "policy_lineage_id": "QPDS-POLICY-2026-02-10-M03-001",
+  "subject_type": "dataset_passport",
+  "subject_ref_id": "QPDS-2026-02-10-M03-TIMEPRESSURE-001",
+  "policy_context": {
+    "policy_documents": [
+      {
+        "document_id": "APOD-TR-002",
+        "title": "A WEB of Sharing Trust–Responsibility Toward a Trustless Future Vol.2",
+        "edition": "Second Edition — Version A",
+        "version": "Version A",
+        "section_ref": "Runtime evidence and architecture-agnostic governance"
+      },
+      {
+        "document_id": "APOD-TR-003",
+        "title": "A WEB of Sharing Trust–Responsibility Toward a Trustless Future Vol.2",
+        "edition": "Version B",
+        "version": "Version B",
+        "section_ref": "Architecture illustration and optional execution substrate"
+      },
+      {
+        "document_id": "APOD-TR-004",
+        "title": "A WEB of Sharing Trust–Responsibility Toward a Trustless Future Vol.2",
+        "edition": "Second Edition — Version C",
+        "version": "Version C",
+        "section_ref": "Onboarding and containment discipline"
+      },
+      {
+        "document_id": "APOD-TR-007",
+        "title": "Governed Dataset Onboarding and Lifecycle Routing for AI Training Systems",
+        "edition": "First Edition — Draft A",
+        "version": "Draft A",
+        "section_ref": "Dataset Passport, routing, lineage, and promotion"
+      }
+    ],
+    "governance_posture": "contained_onboarding",
+    "sector_profile": "internal governance / standards preparation",
+    "jurisdictional_context": "Australia",
+    "policy_note": "Dataset remains under containment. Presence in dataset lifecycle does not imply approval, trust, or compliance determination."
+  },
+  "policy_bindings": [
+    {
+      "binding_type": "containment",
+      "binding_ref": "dataset_containment_principle",
+      "binding_note": "Dataset presence does not imply authority"
+    },
+    {
+      "binding_type": "routing",
+      "binding_ref": "authorization_routing_policy",
+      "binding_note": "Default route to State 3"
+    },
+    {
+      "binding_type": "promotion",
+      "binding_ref": "promotion_policy",
+      "binding_note": "State 1 requires explicit promotion event"
+    },
+    {
+      "binding_type": "non_claims",
+      "binding_ref": "non_claims_and_governance_boundaries",
+      "binding_note": "No certification, trust, or compliance claim"
+    }
+  ],
+  "template_provenance": {
+    "source_template_family": "stress_testing_transition_templates",
+    "source_template_version": "2020",
+    "template_validation_status": "valid",
+    "template_note": "2020 template treated as preferred valid lineage source for this example."
+  },
+  "policy_assertions": {
+    "informative_only": true,
+    "non_certifying": true,
+    "non_compliance_claim": true,
+    "non_trust_claim": true,
+    "does_not_grant_authority": true
+  },
+  "review_trace": {
+    "review_required": true,
+    "review_status": "pending",
+    "review_note": "Policy lineage supports routing and promotion review but does not determine authorization independently."
+  },
+  "recorded_at_utc": "2026-03-08T00:00:00Z",
+  "updated_at_utc": "2026-03-08T00:00:00Z"
+}

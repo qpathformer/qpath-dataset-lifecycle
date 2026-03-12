@@ -1,0 +1,14 @@
+{
+  "dataset_id": "state3-generated-from-id3-freeze",
+  "dataset_state": "STATE_3",
+  "source_mode": "ID_3",
+  "module_source": "unknown",
+  "session_source": "unknown",
+  "record_type": "governance_reasoning_capture",
+  "status": "reference_stub",
+  "authorized_scopes_applied": [
+    "runtime_reasoning",
+    "synthetic_generation"
+  ],
+  "filter_status": "reference_stub"
+}

@@ -1,0 +1,142 @@
+{
+  "lineage_version": "qpds_lineage_v1.0",
+  "lineage_id": "QPDS-LINEAGE-001",
+  "lineage_type": "mixed_lineage",
+  "dataset_id": "QPDS-EXAMPLE-001",
+  "parent_references": [
+    {
+      "ref_type": "session",
+      "ref_id": "ID2-20260210-1835-session",
+      "note": "Baseline session"
+    },
+    {
+      "ref_type": "session",
+      "ref_id": "ID2-20260210-1907-session-timepressure",
+      "note": "Variant time-pressure session"
+    },
+    {
+      "ref_type": "module",
+      "ref_id": "03",
+      "note": "SAPP Simulation & Stress Testing"
+    },
+    {
+      "ref_type": "artifact",
+      "ref_id": "2026-02-10--FREEZE-20260228-215707Z",
+      "note": "ID_3 outbox freeze package"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "artifact_name": "module_03_baseline.canonical.json",
+      "artifact_role": "module_baseline",
+      "sha256": "bd543483467ba8091f05b91ffafb96cc72c5a69c26995c211edcdb6cf3e1637c",
+      "inspection_status": "frozen_under_ID_3",
+      "frozen_at_utc": "2026-02-28T21:57:07Z"
+    },
+    {
+      "artifact_name": "module_03_variant.canonical.json",
+      "artifact_role": "module_variant",
+      "sha256": "7000b9888893866ad781751346293cdf977ed9bab23e46ee6fe8afd958820d41",
+      "inspection_status": "frozen_under_ID_3",
+      "frozen_at_utc": "2026-02-28T21:57:07Z"
+    },
+    {
+      "artifact_name": "session_baseline.canonical.json",
+      "artifact_role": "session_baseline",
+      "sha256": "4089536a4c2bd91f822a88d6a9561322db00f333834257919b30fa7ea1036698",
+      "inspection_status": "frozen_under_ID_3",
+      "frozen_at_utc": "2026-02-28T21:57:07Z"
+    },
+    {
+      "artifact_name": "session_variant.canonical.json",
+      "artifact_role": "session_variant",
+      "sha256": "7bf3826e371c91dc0249e6d099a6771033ddc2bd65a09791fc36584c987f9c29",
+      "inspection_status": "frozen_under_ID_3",
+      "frozen_at_utc": "2026-02-28T21:57:07Z"
+    }
+  ],
+  "source_sessions": [
+    {
+      "session_id": "ID2-20260210-1835-session",
+      "session_role": "baseline"
+    },
+    {
+      "session_id": "ID2-20260210-1907-session-timepressure",
+      "session_role": "variant"
+    }
+  ],
+  "policy_references": [
+    {
+      "document_id": "APOD-TR-004",
+      "title": "A WEB of Sharing Trust–Responsibility Toward a Trustless Future Vol.2",
+      "edition": "Second Edition — Version C",
+      "section_ref": "Onboarding and containment posture"
+    },
+    {
+      "document_id": "APOD-TR-007",
+      "title": "Governed Dataset Onboarding and Lifecycle Routing for AI Training Systems",
+      "edition": "First Edition — Draft A",
+      "section_ref": "Dataset Passport model"
+    }
+  ],
+  "transformation_history": [
+    {
+      "event_id": "EVT-INGEST-001",
+      "event_type": "artifact_ingestion",
+      "event_timestamp_utc": "2026-02-28T21:57:07Z",
+      "event_summary": "ID_3 freeze package ingested from canonical artifacts and hash manifest.",
+      "input_refs": [
+        "module_03_baseline.canonical.json",
+        "module_03_variant.canonical.json",
+        "session_baseline.canonical.json",
+        "session_variant.canonical.json",
+        "hashes.txt",
+        "ID3_FREEZE_NOTE.md"
+      ],
+      "output_refs": [
+        "QPDS-EXAMPLE-001"
+      ]
+    },
+    {
+      "event_id": "EVT-CONVERT-002",
+      "event_type": "dataset_conversion",
+      "event_timestamp_utc": "2026-03-12T06:55:48Z",
+      "event_summary": "Governance reasoning signals extracted into structured dataset passport and State 3 lifecycle artifacts.",
+      "input_refs": [
+        "QPDS-EXAMPLE-001"
+      ],
+      "output_refs": [
+        "QPDS-ROUTE-001"
+      ]
+    },
+    {
+      "event_id": "EVT-ROUTE-003",
+      "event_type": "routing_assignment",
+      "event_timestamp_utc": "2026-03-12T06:56:21Z",
+      "event_summary": "Dataset assigned to State 3 pending State 2 convergence review and authorization filtering.",
+      "input_refs": [
+        "QPDS-ROUTE-001"
+      ],
+      "output_refs": [
+        "STATE_3"
+      ]
+    }
+  ],
+  "routing_references": [
+    {
+      "routing_id": "QPDS-ROUTE-001",
+      "state": "STATE_3"
+    }
+  ],
+  "promotion_references": [],
+  "lineage_assertions": {
+    "informative_only": true,
+    "non_certifying": true,
+    "non_compliance_claim": true,
+    "non_trust_claim": true,
+    "traceability_intended": true
+  },
+  "recorded_at_utc": "2026-03-12T06:56:21Z",
+  "updated_at_utc": "2026-03-12T06:56:21Z",
+  "notes": "Lineage preserves continuity between ID_2 session and module records packaged under ID_3 freeze and the resulting State 3 dataset passport and routing record."
+}
