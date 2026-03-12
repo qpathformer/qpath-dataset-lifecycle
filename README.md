@@ -39,7 +39,7 @@ be consumed by compatible execution environments such as Q-Pathformer.
 
 This repository publishes the artifact set accompanying
 **APOD-TR-007 — Governed Dataset Onboarding and Lifecycle Routing for AI Training Systems**.
-https://github.com/Access-PoD/access-pod-artifacts/releases/tag/v1.0-apod-lifecycle
+https://github.com/Access-PoD/access-pod-artifacts/releases/tag/v1.0-apod-dataset-lifecycle
 
 The framework defines a governance-aligned mechanism for transforming structured artifacts into machine-readable datasets while preserving provenance, lifecycle state, authorization scope, and lineage traceability.
 
