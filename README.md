@@ -91,6 +91,12 @@ This release also includes **sealed artifact manifests** used for reproducible v
 These manifests support deterministic inspection and verification of the
 published artifact set.
 
+Release reference
+
+The canonical release artifact for this version is available at:
+
+https://github.com/qpathformer/qpath-dataset-lifecycle/releases/tag/v1.0-qpath-dataset-lifecycle
+
 ---
 
 ## Relationship to Access-PoD
@@ -222,7 +228,7 @@ Additional operational documentation includes:
 
 ---
 
-## Repository Structure
+## Repository Layout
 
 The repository is organized to separate governance lifecycle schemas,
 execution extensions, tooling, and example artifacts.
@@ -282,13 +288,12 @@ Root files:
 
 ```
     README.md
-    manifest.json
+    manifest.external.json
     release_notes.md
     CHANGELOG.md
     CONTRIBUTORS.md
-    LICENSE.txt
+    LICENSE
     QPATHFORMER-PLATFORM-1.0.txt
-    hashes.txt
 ```
 
 ---
