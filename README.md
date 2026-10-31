@@ -1,37 +1,21 @@
-# Governed Dataset Lifecycle Framework  
-**Release:** v1.0-qpath-dataset-lifecycle
+# Q-Pathformer Dataset Lifecycle — reference schemas and tooling
 
-Q-Pathformer provides execution tooling compatible with governed datasets
-defined by the Access-PoD governance framework.
+**Release:** [v1.0-qpath-dataset-lifecycle](https://github.com/qpathformer/qpath-dataset-lifecycle/releases/tag/v1.0-qpath-dataset-lifecycle)
 
-The tooling demonstrates how inspection artifacts can be transformed into
-lifecycle-governed datasets while preserving provenance, authorization scope,
-lineage traceability, and lifecycle containment.
+Q-Pathformer Dataset Lifecycle provides reference schemas, example records and tools for turning inspection artifacts into governed dataset candidates. Dataset Passports preserve provenance, lifecycle state, authorisation scope and lineage references. The examples demonstrate conversion, filtering and lifecycle boundaries; some utilities are intentionally reference stubs. Access-PoD supplies the related governance framework.
 
-Reference workflows included in this repository illustrate Dataset Passport
-generation, STATE_3 dataset materialization, authorization filtering, and
-controlled promotion to STATE_1 durable training datasets.
+## Start here
 
-Within the lifecycle model defined in APOD-TR-007, STATE_3 datasets function
-as provisional runtime resources that support contextual reasoning and
-synthetic dataset preparation. Conceptually, this layer may be viewed as
-a governed form of working memory for dataset signals before validation
-and durable training promotion.
+| Goal | Reading destination |
+| --- | --- |
+| Understand the reference workflow | [Implementation guidance](docs/execution_toolkit/implementation_guidance.md) |
+| Inspect commands and implementation limits | [Running the tools](docs/execution_toolkit/running_the_tools.md) |
+| Inspect the Passport contract and example | [Dataset Passport schema](schemas/dataset_passport.schema.json) · [Illustrative Passport](examples/dataset_passport.example.json) |
+| Obtain the preserved artifact set | [Published release](https://github.com/qpathformer/qpath-dataset-lifecycle/releases/tag/v1.0-qpath-dataset-lifecycle) |
 
-Governance authority remains defined by the Access-PoD framework.
+**Implementation boundary.** STATE_3 materialisation is demonstrated by the tools. STATE_2 is a conceptual validation/convergence stage in this reference. The [promotion stub](tools/promotion/state3_to_state1_promoter.py) creates a STATE_1 candidate record with `promotion_status: reference_stub`; it does not grant training authority or complete the governance validation process. Illustrative records can contain placeholder hashes and do not establish audited production provenance.
 
-The tooling in this repository converts ID_3 freeze artifacts into
-governed datasets for lifecycle processing.
-
-These workflows support:
-
-- Dataset Passport generation
-- STATE_3 dataset materialization
-- authorization filtering
-- optional promotion into STATE_1 durable training form
-
-The resulting artifacts are governance-aligned dataset records that may
-be consumed by compatible execution environments such as Q-Pathformer.
+The [boundary statement](compliance/BOUNDARY.md) and [release status](compliance/RELEASE_STATUS.md) define the reference scope. This live README clarifies navigation and the existing implementation; published packages, manifests and release evidence retain their original identities.
 
 ---
 
@@ -42,30 +26,6 @@ This repository publishes the artifact set accompanying
 https://github.com/Access-PoD/access-pod-artifacts/releases/tag/v1.0-apod-dataset-lifecycle
 
 The framework defines a governance-aligned mechanism for transforming structured artifacts into machine-readable datasets while preserving provenance, lifecycle state, authorization scope, and lineage traceability.
-
-## Governed Dataset Lifecycle & Passport Extensions
-
-Q-Pathformer provides **implementation tooling and execution extensions** for working with governed datasets defined under the **Access-PoD governance framework**.
-
-This repository contains reference implementations for:
-
-* Dataset Passport generation
-* Dataset lifecycle routing
-* Authorization filtering
-* Dataset promotion workflows
-* Execution extensions compatible with Q-Pathformer training environments
-
-The governance authority, lifecycle semantics, and policy framework remain defined in the **Access-PoD publications**.
-
----
-
-## Release boundary and status
-
-See:
-- `compliance/BOUNDARY.md`
-- `compliance/RELEASE_STATUS.md`
-
----
 
 ## Release Manifest
 
@@ -82,14 +42,14 @@ This release contains the following artifact groups.
 | Governance boundary declarations | `compliance/` | Release boundary and publication status statements |
 | Supporting documentation | `docs/` | Implementation guidance, repository overview, and architecture reference documents |
 
-This release also includes **sealed artifact manifests** used for reproducible verification of the repository contents:
+The published packages include **sealed artifact manifests** for verification of their identified release snapshots:
 
 - `manifest.internal.json` — enumerates repository files and SHA256 hashes  
 - `manifest.external.json` — describes the packaged release artifact  
 - `sealed_*.zip` and companion `.sha256` verification files
 
 These manifests support deterministic inspection and verification of the
-published artifact set.
+published artifact set. They are historical snapshot records, not an inventory of later live README or maintenance updates.
 
 Release reference
 
@@ -101,83 +61,25 @@ https://github.com/qpathformer/qpath-dataset-lifecycle/releases/tag/v1.0-qpath-d
 
 ## Relationship to Access-PoD
 
-This repository provides implementation tooling and execution extensions
-compatible with the Access-PoD governed dataset lifecycle framework.
-
-Governance authority, lifecycle state definitions, and Dataset Passport
-semantics remain defined by Access-PoD publications and releases.
-
-Q-Pathformer consumes governed datasets but does not determine governance
-authority or certification status.
-
-Access-PoD defines the governance layer.
-https://github.com/Access-PoD/access-pod-artifacts/releases/tag/v1.0-apod-dataset-lifecycle
-
-Q-Pathformer provides a compatible **execution and tooling layer**.
-
-```
-Access-PoD
-    Governance framework
-    Dataset lifecycle model
-    Dataset Passport definition
-
-        ↓
-
-Q-Pathformer
-    Implementation tooling
-    Execution extensions
-    Dataset ingestion workflows
-```
-
-Execution environments may consume governed datasets but **do not determine governance authority or lifecycle state**.
-
----
+Access-PoD defines the governance framework, lifecycle semantics and Dataset Passport model in [APOD-TR-007 and its artifact release](https://github.com/Access-PoD/access-pod-artifacts/releases/tag/v1.0-apod-dataset-lifecycle). Q-Pathformer supplies compatible conversion, routing, filtering and reference promotion tools. Execution outputs provide evidence for review; they do not establish governance authority or certification.
 
 ### Governed Dataset Lifecycle (Access-PoD → Q-Pathformer)
 
-The lifecycle model defined in **APOD-TR-007** separates governance
-authority from execution tooling.
+The following is the conceptual lifecycle described by APOD-TR-007. It does not imply that this repository implements every validation or promotion gate:
 
 ```text
-Access-PoD (Governance Layer)
-    Dataset Passport
-    Lifecycle Routing
-    Authorization Scope
-            │
-            ▼
-        STATE_3
-Runtime / Synthetic Dataset Layer
-            │
-            ▼
-        STATE_2
-Signal Convergence / Validation
-(teacher–student evaluation)
-            │
-            ▼
-        STATE_1
-Durable Training Dataset
-            │
-            ▼
-Q-Pathformer (Execution Layer)
-Dataset materialization
-Dataset filtering
-Dataset promotion
+ID_3 inspection artifacts
+        ↓
+Dataset Passport and STATE_3 materialisation
+        ↓
+STATE_2 validation / signal convergence
+(conceptual stage in this reference)
+        ↓
+STATE_1 durable training dataset
+(requires governance validation and authorisation)
 ```
 
-Dataset promotion and materialization are executed within compatible
-execution environments such as **Q-Pathformer** but remain subject to
-Access-PoD governance conditions.
-
-This diagram illustrates the separation between governance
-authority and execution tooling:
-
-Access-PoD governance
-        ↓
-dataset lifecycle states
-        ↓
-Q-Pathformer execution
-
-Which matches the TR-007 model. 
+The repository's promotion utility demonstrates a candidate-record transformation. A generated STATE_1 label alone is not evidence that the required validation and authorisation occurred. Follow the [command guide](docs/execution_toolkit/running_the_tools.md) for the implemented steps and stub boundaries.
 
 ---
 
@@ -223,8 +125,8 @@ Includes:
 
 Additional operational documentation includes:
 
-• `docs/repository_overview.md`    
-• `docs/SPDX_LICENSE.md`
+- [Repository overview](docs/repository_overview.md) — illustrative structure and documentation roles.
+- [SPDX notice guidance](docs/SPDX_LICENSE.md)
 
 ---
 
@@ -413,11 +315,11 @@ Authorization Filtering
         ↓
 STATE_3 Dataset Materialization
         ↓
-Optional STATE_1 Promotion
+Optional STATE_1 Candidate Transformation (reference stub)
         ↓
 Lineage Validation
         ↓
-STATE_1 durable training dataset
+STATE_1 candidate record (governance authorisation still required)
 ```
 
 ### Example tooling used in this workflow:
@@ -435,15 +337,7 @@ tools/validators/lineage_validator.py
 
 ### Reference Implementation Notice
 
-The tooling in this repository provides reference implementations
-for governed dataset lifecycle workflows.
-
-Several utilities intentionally produce reference stub outputs
-designed to demonstrate lifecycle processing rather than execute
-full production training pipelines.
-
-Execution environments may extend these tools with additional
-dataset processing, model training, and orchestration logic.
+The commands above demonstrate the implemented conversion and routing steps. The STATE_2 stage remains conceptual and the promotion utility remains a candidate-producing stub, as stated in the opening implementation boundary. Model training and production orchestration require separately defined implementation and review.
 
 ---
 
@@ -474,35 +368,11 @@ generation and lifecycle routing.
 
 ---
 
-## Lifecycle Model
+## Lifecycle Model and Governance Boundary
 
-The dataset lifecycle implemented by this repository follows the
-model defined in **APOD-TR-007**.
-https://github.com/Access-PoD/access-pod-artifacts/releases/tag/v1.0-apod-dataset-lifecycle
+The APOD-TR-007 lifecycle distinguishes STATE_3 runtime/synthetic resources, STATE_2 validation and convergence, and STATE_1 durable training datasets. These are governance lifecycle stages, separate from the states of a learning architecture. The [Access-PoD relationship](#relationship-to-access-pod) and opening implementation boundary distinguish that model from the tools implemented here.
 
-
-Datasets typically progress through three governance states:
-
-STATE_3 — runtime and synthetic dataset layer  
-STATE_2 — validation and signal convergence layer, where teacher–student signals are evaluated before durable training 
-promotion. 
-STATE_1 — durable training dataset layer
-
-These states represent governance lifecycle stages rather than
-execution stages of a training architecture.
-
-Q-Pathformer provides the execution tooling that materializes
-datasets and supports controlled promotion between lifecycle states.
-
----
-
-## Governance Boundary
-
-This repository **does not define governance authority**.
-
-Lifecycle rules, Dataset Passport semantics, and governance boundaries are defined by **Access-PoD publications**.
-
-Q-Pathformer consumes governed datasets but does not certify them.
+Governance authority remains external to this repository. Dataset preparation and a lifecycle label do not certify a dataset or authorise training.
 
 ---
 
@@ -515,8 +385,8 @@ while protecting the integrity of the platform architecture.
 
 See:
 
-- `QPATHFORMER-PLATFORM-1.0.txt`
-- `docs/QPATHFORMER-PLATFORM-1.0_LICENSE.pdf`
+- [QPATHFORMER-PLATFORM-1.0.txt](QPATHFORMER-PLATFORM-1.0.txt)
+- [Historical licence PDF](<docs/QPATHFORMER-PLATFORM-1.0 LICENSE.pdf>)
 
 ---
 

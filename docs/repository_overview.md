@@ -27,6 +27,8 @@ v1.0-qpath-dataset-lifecycle
 
 # Repository Structure
 
+The tree below is an illustrative layout retained from the original overview, not an exact file inventory. The current root uses `manifest.external.json`, `LICENSE` and `QPATHFORMER-PLATFORM-1.0.txt`; package manifests and checksums identify their own release snapshots. Use the [main README](../README.md#repository-layout) and tracked repository tree for current navigation.
+
 ```
 v1.0-qpath-dataset-lifecycle/
 │
@@ -87,9 +89,9 @@ Normative governance definitions remain in **APOD-TR-007**.
 
 Additional repository documentation includes:
 
-• `running_the_tools.md` — command examples and execution workflow  
-• `SPDX_LICENSE.md` — SPDX license header usage  
-• `LICENSE_NOTICE.md` — license summary for distributed artifacts
+- [Running the tools](execution_toolkit/running_the_tools.md) — command examples and execution workflow.
+- [SPDX licence guidance](SPDX_LICENSE.md) — SPDX licence header usage.
+- [Licence notice](LICENSE_NOTICE.md) — licence summary for distributed artifacts
 
 ---
 
